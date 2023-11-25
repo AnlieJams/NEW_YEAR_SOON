@@ -12,13 +12,13 @@ namespace Form1
            
             targetDateTime = new DateTime(2023, 12, 31, 23, 59, 59);
 
-            // Инициализация таймера
+            
             timer = new Timer();
             timer.Interval = 1000;
             timer.Tick += Timer_Tick;
             timer.Start();
 
-            // Первоначальное обновление времени
+           
             UpdateTime();
         }
 
@@ -34,12 +34,12 @@ namespace Form1
             TimeSpan remainingTime = targetDateTime - DateTime.Now;
 
             
-            labelTimeRemaining.Text = $"{remainingTime.Days} дней {remainingTime.Hours} часов {remainingTime.Minutes} минут {remainingTime.Seconds} секунд";
+            labelTimeRemaining.Text = $"{remainingTime.Days} Г¤Г­ГҐГ© {remainingTime.Hours} Г·Г Г±Г®Гў {remainingTime.Minutes} Г¬ГЁГ­ГіГІ {remainingTime.Seconds} Г±ГҐГЄГіГ­Г¤";
 
            
             if (remainingTime.TotalSeconds <= 0)
             {
-                labelTimeRemaining.Text = "Отсчет завершен!";
+                labelTimeRemaining.Text = "ГЋГІГ±Г·ГҐГІ Г§Г ГўГҐГ°ГёГҐГ­";
                 timer.Stop(); 
             }
         }
